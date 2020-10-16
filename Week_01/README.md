@@ -201,4 +201,4 @@ LocalVariableTable:
 
 - <h5>画一张图，展示**Xmx**、**Xms**、**Xmn**、**Meta**、**DirectMemory**、**Xss**这些内存参数的 关系。</h5>
 
-  - ![图片](/Users/tanghui/geekbang/kimmking/JAVA-000/Week_01/JVM内存模型以及参数.png)
+  - [github](https://github.com/huyanatown/JAVA-000/blob/main/Week_01/JVM内存模型以及参数.png)

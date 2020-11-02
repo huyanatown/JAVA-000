@@ -19,11 +19,18 @@ public class NettyClientOutboundHandler implements OutboundHandler {
 
     @Override
     public void handle(FullHttpRequest fullRequest, ChannelHandlerContext ctx) throws InterruptedException {
-        client.connect(fullRequest.uri());
-        handleResponse(fullRequest, ctx);
+        // @TODO 观看了 `黄健` 同学 传递父PrentContext 的代码后，被他的思路理清了；重新写的，简单很多
+        client.connect(fullRequest, ctx);
+
+
+        // @TODO 之前方法
+//        client.connect(fullRequest.uri());
+//        handleResponse(fullRequest, ctx);
     }
 
 
+    // @TODO 之前方法，还是按照httpclient的方式去处理，纠结点在 NettyInboundHandler#channelRead() 如何将读到的数据返回过来
+    @Deprecated
     private void handleResponse(final FullHttpRequest fullRequest, final ChannelHandlerContext ctx) {
         FullHttpResponse response = null;
         try {

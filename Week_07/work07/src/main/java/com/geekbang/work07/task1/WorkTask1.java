@@ -1,7 +1,6 @@
 package com.geekbang.work07.task1;
 
 
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
